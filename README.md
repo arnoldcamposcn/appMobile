@@ -31,22 +31,13 @@ Metro es la herramienta de compilación para React Native. Para iniciarlo, ejecu
 # Usando npm
 npm start
 
-# O usando Yarn
-yarn start
-```
 
-### Paso 2: Construir y ejecutar la app
-
-Con Metro en ejecución, abre una nueva terminal y usa uno de los siguientes comandos para ejecutar la app en Android o iOS:
+### Paso 2:ejecutar la app
 
 #### Android
 
-```sh
-# Usando npm
-npm run android
+npx react-native run-android
 
-# O usando Yarn
-yarn android
 ```
 
 - [Documentación oficial de React Native](https://reactnative.dev)
