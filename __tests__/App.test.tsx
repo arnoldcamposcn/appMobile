@@ -2,12 +2,18 @@
  * @format
  */
 
-import React from 'react';
-import ReactTestRenderer from 'react-test-renderer';
-import App from '../App';
+import React from "react";
+import { render } from "@testing-library/react-native";
+import { Provider } from "react-redux";
+import { store } from "../src/store/store";
+import App from "../App";
 
-test('renders correctly', async () => {
-  await ReactTestRenderer.act(() => {
-    ReactTestRenderer.create(<App />);
-  });
+test("Debe renderizar la aplicación sin errores", () => {
+  const { getByTestId } = render(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+
+  expect(getByTestId("app-navigator")).toBeTruthy();
 });
